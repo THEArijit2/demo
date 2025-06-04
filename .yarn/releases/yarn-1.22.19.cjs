@@ -1,1 +1,3 @@
-Redirecting to https://github.com/yarnpkg/yarn/releases/download/v1.22.22/yarn-1.22.22.js
+#!/usr/bin/env node
+
+require('./yarn-1.22.19.js');
