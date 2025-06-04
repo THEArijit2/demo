@@ -1,7 +1,18 @@
 name = "openmail"
-main = ".open-next/worker.js"
-compatibility_date = "2024-09-23"
-compatibility_flags = ["nodejs_compat"]
+compatibility_date = "2024-09-23" # Ensure this is >= the required date
 
-[site]
-bucket = ".open-next/assets"
+[pages]
+project = "openmail"
+route = "/*"
+upload = { 
+  format = "directory", 
+  dir = ".open-next"
+}
+
+[build]
+command = "npx opennextjs-cloudflare build"
+cwd = "."
+watch_dir = ["app", "pages", "public", "next.config.js", "package.json", "tsconfig.json"]
+
+[functions]
+directory = ".open-next/functions"
