@@ -1,18 +1,4 @@
 name = "openmail"
-compatibility_date = "2024-09-23" # Ensure this is >= the required date
+compatibility_date = "2024-09-23"
 
-[pages]
-project = "openmail"
-route = "/*"
-upload = { 
-  format = "directory", 
-  dir = ".open-next"
-}
-
-[build]
-command = "npx opennextjs-cloudflare build"
-cwd = "."
-watch_dir = ["app", "pages", "public", "next.config.js", "package.json", "tsconfig.json"]
-
-[functions]
-directory = ".open-next/functions"
+pages_build_output_dir = ".open-next"
